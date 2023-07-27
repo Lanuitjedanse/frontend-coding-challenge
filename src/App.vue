@@ -12,10 +12,10 @@
         @getMoreImages="handleGetMoreImages"
       />
       <LoadingPlaceholder v-if="loading" class="app__loading-placeholder" />
-      <p v-if="nasaImages.length === 0 && !error">
+      <p v-show="nasaImages.length === 0 && !error">
         There are no images available
       </p>
-      <p v-if="isNoImageLength && nasaImages.length > 0">
+      <p v-show="isNoImageLength && nasaImages.length > 0">
         There are no more images to load
       </p>
     </div>
@@ -96,11 +96,14 @@ export default {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   overflow: hidden;
   margin: 0;
-  padding: 0;
   height: 100%;
 }
 
@@ -109,16 +112,15 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
+  height: 100%;
 }
 
 .app__photos-container {
-  flex: 1;
+  height: 100%;
   display: grid;
   justify-items: center;
   grid-template-rows: 3;
   width: 100%;
-  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -126,7 +128,7 @@ body {
 .app__sidebar {
   font-size: small;
   width: 5rem;
-  height: 100vh;
+  height: 100%;
 }
 
 .app__logo {
@@ -138,7 +140,7 @@ body {
   .app__sidebar {
     font-size: large;
     width: 20rem;
-    height: 100vh;
+    height: 100%;
   }
 
   .app__logo {
@@ -150,12 +152,11 @@ body {
 .app__loading-placeholder {
   grid-row: 3;
   width: 2rem;
-  margin-top: -5rem;
+  margin-top: -4rem;
 }
 
 .app__grid-container {
-  height: flex 1;
+  height: 100%;
   grid-row: 2;
-  overflow-x: hidden;
 }
 </style>

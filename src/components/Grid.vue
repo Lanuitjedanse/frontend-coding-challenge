@@ -41,14 +41,17 @@ export default {
     handleScroll() {
       const imagesContainer = this.$refs.imagesContainer;
 
-      if (imagesContainer) {
-        const isAtBottom =
-          imagesContainer.scrollTop + imagesContainer.clientHeight ===
-          imagesContainer.scrollHeight;
+      const isAtBottom =
+        imagesContainer.scrollTop + imagesContainer.clientHeight ===
+        imagesContainer.scrollHeight;
 
-        if (isAtBottom) {
-          this.$emit("getMoreImages");
-        }
+      const difference =
+        imagesContainer.scrollTop +
+        imagesContainer.clientHeight -
+        imagesContainer.scrollHeight;
+
+      if (isAtBottom || difference <= 2) {
+        this.$emit("getMoreImages");
       }
     },
   },
@@ -58,7 +61,6 @@ export default {
 <style>
 .grid__container {
   display: grid;
-  grid-row: 3 / 4;
   gap: 30px;
   grid-auto-flow: row;
   width: 100%;

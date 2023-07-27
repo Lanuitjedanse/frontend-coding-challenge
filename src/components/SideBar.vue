@@ -22,7 +22,6 @@ export default {
   },
   methods: {
     onConfirm(event) {
-      console.log("this.type", this.type);
       event.preventDefault();
       this.$emit("onConfirm", this.type);
     },
