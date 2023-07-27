@@ -58,7 +58,7 @@ export default {
   object-fit: cover;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .card__image {
     width: 17rem;
     height: 17rem;

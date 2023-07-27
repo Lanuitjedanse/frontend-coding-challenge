@@ -32,7 +32,7 @@ export default {
   width: 5rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .error__image {
     width: 10rem;
   }

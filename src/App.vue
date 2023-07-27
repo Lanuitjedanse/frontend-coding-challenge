@@ -134,7 +134,7 @@ body {
   width: 15rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .app__sidebar {
     font-size: large;
     width: 20rem;
