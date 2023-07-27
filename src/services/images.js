@@ -6,9 +6,7 @@ const images = {
       const response = await fetch(
         `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?sol=1000&page=${pageNumber}&cameras=${cameras}&api_key=${apiKey}`
       );
-      if (!response.ok) {
-        throw new Error("Network response was not ok.");
-      }
+
       const data = await response.json();
       return data;
     } catch (error) {
