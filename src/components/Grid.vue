@@ -5,7 +5,8 @@
       :key="image.id"
       :src="image.img_src"
       :alt="image.camera.full_name"
-      :description="image.camera.full_name"
+      :earth-date="image.earth_date"
+      :camera-name="image.camera.name"
     />
   </div>
 </template>
