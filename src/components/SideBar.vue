@@ -31,6 +31,7 @@ export default {
 
 <style>
 .sidebar__form {
+  font-size: x-small;
   padding: 1rem;
   gap: 2rem;
   color: white;

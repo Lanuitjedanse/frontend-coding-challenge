@@ -126,8 +126,8 @@ body {
 }
 
 .app__sidebar {
-  font-size: small;
-  width: 5rem;
+  font-size: x-small;
+  width: 7rem;
   height: 100%;
 }
 
